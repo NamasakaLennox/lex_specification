@@ -1,6 +1,6 @@
 This is ABC
-This is another ABC ABC
+This is another ABCABC
 Let's see if ABC123 works
-middleABCatr
+middleabbbbcatr
 endABC
 ABCABCcbaABCcc

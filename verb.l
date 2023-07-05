@@ -14,10 +14,12 @@ is|am|are|were|was|be|being|been|do|does|did|will|should|would|can|could|has|hav
 . /* ignores any other characters */
 %%
 
+/* user subroutines */
 int yywrap(void) {}
 
 int main(void)
 {
+printf("Enter sample input text:\n");
 yylex();
 return (0);
 }

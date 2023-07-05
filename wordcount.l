@@ -4,11 +4,12 @@
 #include <stdio.h>
 #include <string.h>
 int count = 0;
+int size = 0;
 %}
 
 /* rule section */
 %%
-([a-zA-Z0-9])+ {count++;}
+([a-zA-Z0-9])+ {count++; size += yyleng;}
 .
 %%
 
@@ -21,5 +22,6 @@ yyin = fopen("input.txt", "r");
 yylex();
 
 printf("Total number of words is: %d\n", count);
+printf("The size of the text is: %d\n", size);
 return (0);
 }

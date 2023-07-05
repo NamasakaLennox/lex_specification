@@ -3,7 +3,6 @@
 /* Definition section */
 %{
 #include <stdio.h>
-#include <string.h>
 %}
 
 /* rule section */
@@ -19,8 +18,11 @@ int main()
 {
 extern FILE *yyin, *yyout;
 yyin = fopen("abc.txt", "r");
-yyout = fopen("ABC.txt", "w");
+yyout = fopen("ABC_OUTPUT.txt", "w");
 
 yylex();
+
+fclose(yyin);
+fclose(yyout);
 return (0);
 }
